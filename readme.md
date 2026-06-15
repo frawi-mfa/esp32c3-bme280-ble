@@ -15,10 +15,15 @@ onboard 0.42" OLED Display und BME280 Umgebungssensor.
 ## Verkabelung
 
 BME280 und OLED teilen denselben I2C Bus (GPIO5/GPIO6):
+
 BME280 VCC → 3.3V
+
 BME280 GND → GND
+
 BME280 SDA → GPIO5
+
 BME280 SCL → GPIO6
+
 
 ## Software
 
