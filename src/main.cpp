@@ -50,19 +50,6 @@ void setup() {
     // OLED
     u8g2.begin();
     Wire.begin(5, 6);
-
-    // Chip ID lesen
-Wire.beginTransmission(0x76);
-Wire.write(0xD0); // Chip ID Register
-Wire.endTransmission();
-Wire.requestFrom(0x76, 1);
-if (Wire.available()) {
-    byte chipId = Wire.read();
-    Serial.print("Chip ID: 0x");
-    Serial.println(chipId, HEX);
-    // BMP280 = 0x58, BME280 = 0x60, gefälscht = anderer Wert
-}
-
     delay(100);
 
     // Sensor initialisieren
